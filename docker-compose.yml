@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: tetrawiis
+      POSTGRES_USER: tetrawiis
+      POSTGRES_PASSWORD: tetrawiis
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U tetrawiis -d tetrawiis']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  api:
+    build: ./api
+    env_file: ./api/.env
+    ports:
+      - '4000:4000'
+    depends_on:
+      postgres:
+        condition: service_healthy
+volumes:
+  postgres_data:
