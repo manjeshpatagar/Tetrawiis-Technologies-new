@@ -8,6 +8,12 @@ export default function manifest(): MetadataRoute.Manifest {
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#061728',
-    icons: [{ src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' }],
+    icons: [
+      {
+        src: '/images/tetrawiis-logo.png',
+        sizes: '707x353',
+        type: 'image/png',
+      },
+    ],
   };
 }

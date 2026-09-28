@@ -23,7 +23,10 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
   },
-  icons: { icon: '/favicon.svg' },
+  icons: {
+    icon: '/images/tetrawiis-logo.png',
+    apple: '/images/tetrawiis-logo.png',
+  },
   manifest: '/manifest.webmanifest',
 };
 export const viewport: Viewport = {

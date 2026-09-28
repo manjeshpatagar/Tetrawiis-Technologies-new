@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BrandLogo } from '@/components/shared/brand-logo';
 import { Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { navigation, siteConfig } from '@/constants/site';
 export function Footer() {
@@ -6,9 +7,13 @@ export function Footer() {
     <footer className="bg-navy-950 text-slate-300">
       <div className="site-container grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="text-xl font-bold text-white">
-            <span className="text-brand-500">Tetra</span>wiis
-          </p>
+          <Link
+            href="/"
+            aria-label="Tetrawiis Technologies home"
+            className="inline-block max-w-full rounded-lg bg-white p-3"
+          >
+            <BrandLogo className="h-auto w-52 max-w-full" />
+          </Link>
           <p className="mt-4 max-w-sm leading-7">
             Engineering dependable digital futures for ambitious organizations.
           </p>

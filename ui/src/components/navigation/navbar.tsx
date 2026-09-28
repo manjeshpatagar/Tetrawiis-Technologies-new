@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { BrandLogo } from '@/components/shared/brand-logo';
 import { ChevronDown, Menu } from 'lucide-react';
 import { navigation, services } from '@/constants/site';
 import { Button } from '@/components/ui/button';
@@ -9,9 +10,13 @@ export function Navbar() {
   const { mobileMenuOpen, setMobileMenuOpen } = useUiStore();
   return (
     <header className="sticky top-0 z-30 border-b bg-white/95 backdrop-blur">
-      <div className="site-container flex h-18 items-center justify-between">
-        <Link href="/" className="text-navy-950 text-xl font-bold">
-          <span className="text-brand-600">Tetra</span>wiis
+      <div className="site-container flex h-24 items-center justify-between">
+        <Link
+          href="/"
+          className="shrink-0"
+          aria-label="Tetrawiis Technologies home"
+        >
+          <BrandLogo className="h-auto w-40 sm:w-44" priority />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {navigation.map((item) =>
