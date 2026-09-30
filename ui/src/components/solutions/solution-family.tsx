@@ -6,6 +6,7 @@ import { VendorSolutionCard } from '@/components/solutions/vendor-solution-card'
 import type { VendorSolution } from '@/constants/solutions-page';
 
 export function SolutionFamily({
+  id,
   eyebrow,
   title,
   description,
@@ -14,6 +15,7 @@ export function SolutionFamily({
   imageRight = false,
   solutions,
 }: {
+  id: string;
   eyebrow: string;
   title: string;
   description: string;
@@ -24,7 +26,7 @@ export function SolutionFamily({
 }) {
   const reduceMotion = useReducedMotion();
   return (
-    <section className="section">
+    <section id={id} className="section scroll-mt-24">
       <div className="site-container">
         <motion.div
           className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16"

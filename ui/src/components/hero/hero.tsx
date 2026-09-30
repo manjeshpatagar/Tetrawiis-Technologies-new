@@ -45,9 +45,9 @@ export function Hero() {
         speed={900}
         loop
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
         }}
         keyboard={{ enabled: true, onlyInViewport: true }}
         navigation={{ prevEl: '.hero-prev', nextEl: '.hero-next' }}

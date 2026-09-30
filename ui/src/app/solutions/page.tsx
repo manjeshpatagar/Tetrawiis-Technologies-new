@@ -6,7 +6,7 @@ import { SolutionAdvantageCard } from '@/components/solutions/solution-advantage
 import { SolutionsCTA } from '@/components/solutions/solutions-cta';
 import { SolutionCard } from '@/components/cards/solution-card';
 import { SectionHeading } from '@/components/sections/section-heading';
-import { solutions } from '@/constants/site';
+import { solutions, solutionCapabilities } from '@/constants/site';
 import {
   cyberSolutions,
   infrastructureSolutions,
@@ -28,7 +28,8 @@ export default function SolutionsPage() {
 
       <SolutionFamily
         eyebrow="Cybersecurity"
-        title="Cyber Security Solutions"
+        id={solutionCapabilities[0].id}
+        title={solutionCapabilities[0].title}
         description="Protect your organization against evolving cyber threats using enterprise-grade security solutions from globally trusted OEM partners."
         image="/images/hero/noc-team.png"
         imageAlt="Cybersecurity operations team monitoring enterprise threats"
@@ -38,7 +39,8 @@ export default function SolutionsPage() {
       <div className="bg-surface">
         <SolutionFamily
           eyebrow="Infrastructure"
-          title="IT Infrastructure Solutions"
+          id={solutionCapabilities[1].id}
+          title={solutionCapabilities[1].title}
           description="Build a dependable technology foundation with enterprise compute, storage, virtualization, cloud, switching, racks, and structured cabling."
           image="/images/hero/infrastructure.png"
           imageAlt="Modern enterprise data center infrastructure"
@@ -75,7 +77,8 @@ export default function SolutionsPage() {
 
       <SolutionFamily
         eyebrow="Supporting capabilities"
-        title="Other IT Solutions"
+        id={solutionCapabilities[2].id}
+        title={solutionCapabilities[2].title}
         description="Complete your technology environment with resilient backup, monitoring, applications, databases, migration, audit, and maintenance services."
         image="/images/hero/tech-talent.png"
         imageAlt="Enterprise IT specialists delivering managed technology solutions"

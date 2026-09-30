@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
 interface Offering {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -22,7 +23,8 @@ export function ServiceOffering({
   const reduceMotion = useReducedMotion();
   return (
     <motion.article
-      className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16"
+      id={offering.id}
+      className="grid scroll-mt-28 items-center gap-10 lg:grid-cols-2 lg:gap-16"
       initial={reduceMotion ? false : { opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}

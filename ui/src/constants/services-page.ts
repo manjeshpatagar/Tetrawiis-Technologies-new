@@ -1,5 +1,6 @@
 export const serviceOfferings = [
   {
+    id: 'cloud-hybrid-infrastructure',
     title: 'Cloud & Hybrid Infrastructure',
     description:
       'Stop overspending on unoptimized cloud environments. We build agile, cloud-native frameworks designed for cost efficiency and infinite scale.',
@@ -14,6 +15,7 @@ export const serviceOfferings = [
     ],
   },
   {
+    id: 'next-gen-enterprise-networking',
     title: 'Next-Gen Enterprise Networking',
     description:
       'Your business is distributed; your network should be too. We eliminate latency, bottlenecks, and connectivity drops.',
@@ -27,6 +29,7 @@ export const serviceOfferings = [
     ],
   },
   {
+    id: 'resilience-cybersecurity-compliance',
     title: 'Resilience, Cybersecurity & Compliance',
     description:
       'Infrastructure is useless if it isn’t secure. We embed security directly into the foundational layer of your IT environment.',
@@ -42,6 +45,7 @@ export const serviceOfferings = [
     ],
   },
   {
+    id: 'managed-it-infrastructure-operations',
     title: 'Managed IT & Infrastructure Operations',
     description:
       'Offload the day-to-day maintenance to our specialized engineering team so your internal team can focus on strategic growth.',

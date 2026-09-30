@@ -66,3 +66,23 @@ export const solutions = [
     tag: 'Industry 4.0',
   },
 ] as const;
+
+export const solutionCapabilities = [
+  {
+    id: 'cyber-security-solutions',
+    title: 'Cyber Security Solutions',
+    description: 'Enterprise security solutions to protect your organization.',
+  },
+  {
+    id: 'it-infrastructure-solutions',
+    title: 'IT Infrastructure Solutions',
+    description:
+      'Reliable compute, storage, cloud, and network infrastructure.',
+  },
+  {
+    id: 'other-it-solutions',
+    title: 'Other IT Solutions',
+    description:
+      'Backup, monitoring, applications, and IT maintenance services.',
+  },
+] as const;
