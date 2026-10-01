@@ -6,7 +6,12 @@ export interface ClientLogo {
 }
 
 export const clientLogos: readonly ClientLogo[] = [
-  { name: 'PRAMA', src: '/images/clients/prama.png', width: 793, height: 213 },
+  {
+    name: 'Aurobindo Pharma',
+    src: '/images/clients/aurobindo-pharma.webp',
+    width: 1280,
+    height: 571,
+  },
   { name: 'CAE', src: '/images/clients/cae.png', width: 217, height: 105 },
   {
     name: 'Namma Metro',

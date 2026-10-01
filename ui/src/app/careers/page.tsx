@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { PageHero } from '@/components/layout/page-hero';
 import { SectionHeading } from '@/components/sections/section-heading';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/constants/site';
 export const metadata: Metadata = { title: 'Careers' };
 const roles = [
   'Senior Full Stack Engineer',
@@ -23,6 +24,15 @@ export default function CareersPage() {
             title="Find your next opportunity."
             copy="We value clear thinking, generous collaboration and people who care about the work behind the work."
           />
+          <p className="mt-6">
+            For career enquiries, email{' '}
+            <a
+              href={`mailto:${siteConfig.careersEmail}`}
+              className="text-brand-600 hover:text-brand-700 underline underline-offset-4"
+            >
+              {siteConfig.careersEmail}
+            </a>.
+          </p>
           <div className="mt-10 divide-y rounded-2xl border">
             {roles.map((role, i) => (
               <article
@@ -35,7 +45,7 @@ export default function CareersPage() {
                     {i % 2 ? 'Bengaluru · Hybrid' : 'Remote · India'}
                   </p>
                 </div>
-                <Button href="/contact" variant="secondary">
+                <Button href={`mailto:${siteConfig.careersEmail}?subject=${encodeURIComponent(role)}`} variant="secondary">
                   Express interest
                 </Button>
               </article>
